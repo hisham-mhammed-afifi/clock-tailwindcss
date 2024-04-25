@@ -1,13 +1,13 @@
 <ul>
   @for (alarm of alarms; track $index) {
-  <li class="flex justify-between items-center text-slate-400 cursor-pointer">
+  <li class="flex justify-between items-center text-slate-200 cursor-pointer">
     <p class="my-5">
       <span class="text-4xl">{{ alarm.at | date : "h:mm" }}</span>
       <span class="text-l mx-3">{{ alarm.at | date : "a" }}</span>
     </p>
 
     <div
-      class="flex items-center cursor-pointer rounded-full w-11 h-6"
+      class="flex items-center cursor-pointer rounded-full w-10 h-6"
       [ngClass]="{
         'justify-end bg-red-600': alarm.active,
         'bg-slate-700': !alarm.active

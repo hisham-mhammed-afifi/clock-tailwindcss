@@ -1,25 +1,25 @@
 <div class="container h-screen flex flex-col mx-auto px-4">
-  <section class="flex justify-between py-2 text-sm">
-    <button class="px-6 py-1 hover:bg-red-700 hover:bg-opacity-30 rounded-lg">
+  <section class="flex justify-between py-4 text-sm">
+    <button class="px-3 hover:bg-slate-700 hover:bg-opacity-30 rounded">
       Edit
     </button>
-    <button class="p-2 rounded-full hover:bg-red-700 hover:bg-opacity-30">
-      <img src="assets/images/two-dots.svg" width="20px" alt="" />
+    <button class="p-1 rounded-full hover:bg-slate-700 hover:bg-opacity-30">
+      <img src="assets/images/two-dots.svg" width="15px" alt="" />
     </button>
   </section>
   <nav class="flex justify-evenly">
     @for (app of apps; track $index) {
     <a
-      class="px-5 py-3"
+      class="py-3 border-b-[1px] border-black"
       [routerLink]="app.path"
-      routerLinkActive="text-red-500 border-b-2 border-b-red-500"
+      [routerLinkActive]="['text-red-400', 'border-b-red-400']"
     >
       {{ app.label }}
     </a>
     }
   </nav>
 
-  <main class="my-8 grow">
+  <main class="grow">
     <router-outlet />
   </main>
 </div>
