@@ -1,5 +1,5 @@
-<div class="container h-screen flex flex-col mx-auto px-4">
-  <section class="flex justify-between py-4 text-sm">
+<div class="container h-screen flex flex-col mx-auto px-2">
+  <section class="flex justify-between py-2 text-sm">
     <button class="px-3 hover:bg-slate-700 hover:bg-opacity-30 rounded">
       Edit
     </button>
@@ -7,12 +7,12 @@
       <img src="assets/images/two-dots.svg" width="15px" alt="" />
     </button>
   </section>
-  <nav class="flex justify-evenly">
+  <nav class="flex justify-evenly text-lg">
     @for (app of apps; track $index) {
     <a
       class="py-3 border-b-[1px] border-black"
       [routerLink]="app.path"
-      [routerLinkActive]="['text-red-400', 'border-b-red-400']"
+      [routerLinkActive]="['text-red-500', 'border-b-red-500']"
     >
       {{ app.label }}
     </a>
