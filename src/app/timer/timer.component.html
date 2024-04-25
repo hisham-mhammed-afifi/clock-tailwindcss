@@ -1,0 +1,22 @@
+<section class="h-[320px] overflow-hidden">
+  <div class="flex justify-around items-center">
+    <div class="flex flex-col h-full overflow-y-auto cursor-grab">
+      @for (h of [1, 2, 3, 4, 5, 6, 7, 8, 9]; track $index) {
+      <span class="text-5xl">{{ h }}</span>
+      }
+    </div>
+    <span class="text-sm">hours</span>
+    <div class="flex flex-col h-full overflow-y-auto cursor-grab">
+      @for (h of [1, 2, 3, 4, 5, 6, 7, 8, 9]; track $index) {
+      <span class="text-5xl">{{ h }}</span>
+      }
+    </div>
+    <span class="text-sm">min</span>
+    <div class="flex flex-col h-full overflow-y-auto cursor-grab">
+      @for (h of [1, 2, 3, 4, 5, 6, 7, 8, 9]; track $index) {
+      <span class="text-5xl">{{ h }}</span>
+      }
+    </div>
+    <span class="text-sm">sec</span>
+  </div>
+</section>

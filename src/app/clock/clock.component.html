@@ -1,0 +1,21 @@
+<ul>
+  @for (clock of clocks; track $index) {
+  <li class="flex justify-between my-12">
+    <div class="flex">
+      <img class="rounded-full w-[50px] h-[50px]" src="assets/images/clock.gif" alt="" />
+      <div class="mx-2">
+        <p class="text-lg text-slate-200">{{ clock.country }}</p>
+        <span class="text-sm text-slate-400">Today</span>
+      </div>
+    </div>
+    <p>
+      <span class="text-3xl text-slate-200">
+        {{ clock.now | date : "hh:mm" }}
+      </span>
+      <span class="text-l mx-1 text-slate-200">
+        {{ clock.now | date : "a" }}
+      </span>
+    </p>
+  </li>
+  }
+</ul>
